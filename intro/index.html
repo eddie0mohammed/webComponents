@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="tooltip.js" defer></script> -->
+    <script src="confirm-link.js" defer></script>
+    <title>Web Components</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .para {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    div {
+        background-color: yellow !important;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <p class="para">hover on this</p>
+        <!-- <my-tooltip></my-tooltip> -->
+
+        <!-- using attributes to display data dynamically -->
+        <!-- <my-tooltip message="This is the tooltip message"></my-tooltip> -->
+
+
+        <!-- <my-confirmlink></my-confirmlink> -->
+        <!-- this will not work -->
+        <!-- when extending a build-in element, 
+        use the original tag and include "is=(customElement)" -->
+        <a is="my-confirmlink" href="https://google.com">Google</a>
+
+    </div>
+
+</body>
+
+</html>
